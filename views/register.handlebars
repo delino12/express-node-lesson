@@ -1,0 +1,75 @@
+<style type="text/css">
+	.dino-form {
+		font-family: lato;
+		font-size: 14px;
+	}
+
+	.dino-input {
+		border: 1px solid #999;
+		padding: 0.8em;
+		border-radius: 3px;
+		width: 100%;
+	}
+
+	.dino-btn {
+		border: 1px solid #999;
+		padding: 0.8em;
+		border-radius: 3px;
+	}
+</style>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="title"> Create Account </h1>
+			<hr />
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-8">
+			<div class="dino-form">
+				<form method="post" action="/create-user">
+					<div class="panel-body">
+						<div class="form-group">
+							<div class="row">
+								<div class="col-sm-2">
+									<label for="name">Name</label>
+								</div>
+								<div class="col-sm-6">
+									<input type="text" class="dino-input" name="name" placeholder="Your Name" required="">
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="row">
+								<div class="col-sm-2">
+									<label for="email">Email</label>
+								</div>
+								<div class="col-sm-6">
+									<input type="email" class="dino-input" name="email" placeholder="Your Email" required="">
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="row">
+								<div class="col-sm-2">
+									<label for="password">Password</label>
+								</div>
+								<div class="col-sm-6">
+									<input type="password" class="dino-input" name="password" placeholder="Create Password" required="">
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<button class="dino-btn">Create Account</button>
+						</div>
+					</div>
+				</form>	
+			</div>
+		</div>
+	</div>
+</div>

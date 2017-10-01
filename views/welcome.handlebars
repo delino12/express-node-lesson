@@ -1,0 +1,51 @@
+ <nav class="navbar" role="navigation">
+	<div class="container">
+	    <div class="menu-container js_nav-item">
+	        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="toggle-icon"></span>
+	        </button>
+	    </div>
+	    <div class="collapse navbar-collapse nav-collapse">
+	    	<div class="menu-container">
+	    		<div class="nav navbar-nav navbar-right">
+	    			<ul class="nav navbar-nav">
+	    				<li><a href="/wallet">Wallet</a></li>
+	    				<li><a href="/register">Settings</a></li>
+	    			</ul>
+	    		</div>
+	    	</div>
+	    </div>
+	</div>
+</nav>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="title"> Drop a post </h1>
+			<hr />
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-8">
+			<div class="dino-form">
+				<form method="post" action="/save-post">
+					<div class="panel-body">
+						<div class="form-group">
+							<div class="row">
+								<div class="col-sm-6">
+									<input type="hidden" name="by" value="delino12">
+									<label for="post">New Post</label>
+									<textarea cols="20" rows="3" class="form-control" required="" name="post"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-primary">Post</button>
+						</div>
+					</div>
+				</form>	
+			</div>
+		</div>
+	</div>
+</div>

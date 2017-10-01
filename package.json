@@ -1,0 +1,24 @@
+{
+  "name": "node-test",
+  "version": "1.0.0",
+  "description": "learning node MVC",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Ekpoto Liberty",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.5",
+    "express-handlebars": "^3.0.0",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.11.14",
+    "router-express": "^1.5.2",
+    "slug": "^0.9.1",
+    "slugs": "^0.1.3"
+  }
+}

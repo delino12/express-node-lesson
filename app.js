@@ -1,0 +1,34 @@
+// import modules
+var express = require('express'); // express application
+var bodyParser = require('body-parser'); // express body parser helper
+var handlebars = require('express-handlebars'); // express view templating engine
+var route = require('./routes/index'); // all routes file path here
+var mongoose = require('mongoose'); // import database
+
+// set express app
+var app = express();
+
+// handlebars
+app.engine('handlebars', handlebars({defaultLayout: 'main', helpers: {section: function(name, options){
+	if(!this._sections) this._sections = {};
+		this._sections[name] = options.fn(this);
+		return null;
+	}
+}}));
+
+// set the view engine
+app.set('view engine', 'handlebars');
+
+// set a public static path
+app.use('/public', express.static('public'));
+
+// parse application/x-www-form-urlencoded 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+// use pages controller bind with routes.
+app.use('/', route);
+
+
+// export application
+module.exports = app;
